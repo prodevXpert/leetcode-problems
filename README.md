@@ -123,7 +123,7 @@ Avoid splitting by language at the repo root (`python/problems/...`, `js/problem
 
 | # | Date | ID | Title | Difficulty | Topics | Status |
 |---|------|-----|-------|------------|--------|--------|
-| 1 | — | [1929](https://leetcode.com/problems/concatenation-of-array/) | Concatenation of Array | Easy | Array | 🟡 In progress |
+| 1 | 2026-06-09 | [1929](https://leetcode.com/problems/concatenation-of-array/) | Concatenation of Array | Easy | Array | ✅ Done |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Planned
 
