@@ -1,0 +1,25 @@
+{
+  "name": "leetcode-problems",
+  "version": "1.0.0",
+  "description": "A personal repository for solving [LeetCode](https://leetcode.com/) problems **one per day**, with each problem isolated in its own folder so it can be reviewed, revised, or referenced independently later.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prodevXpert/leetcode-problems.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prodevXpert/leetcode-problems/issues"
+  },
+  "homepage": "https://github.com/prodevXpert/leetcode-problems#readme",
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  }
+}

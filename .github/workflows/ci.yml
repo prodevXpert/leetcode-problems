@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    name: Run solution tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run Python tests
+        run: |
+          shopt -s globstar nullglob
+          tests=(problems/**/python/test_solution.py)
+          if [ ${#tests[@]} -eq 0 ]; then
+            echo "No Python tests found."
+            exit 0
+          fi
+          for test in "${tests[@]}"; do
+            echo "Running $test"
+            python "$test"
+          done
+
+      - name: Run JavaScript tests
+        run: |
+          shopt -s globstar nullglob
+          tests=(problems/**/javascript/test_solution.js)
+          if [ ${#tests[@]} -eq 0 ]; then
+            echo "No JavaScript tests found."
+            exit 0
+          fi
+          for test in "${tests[@]}"; do
+            echo "Running $test"
+            node "$test"
+          done
+
+  quality:
+    name: Code quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python linters
+        run: pip install ruff
+
+      - name: Lint Python
+        run: |
+          if [ -n "$(find problems -name '*.py' -print -quit)" ]; then
+            ruff check problems templates
+            ruff format --check problems templates
+          else
+            echo "No Python files to lint."
+          fi
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install ESLint
+        run: npm init -y && npm install --save-dev eslint@8
+
+      - name: Lint JavaScript
+        run: |
+          if [ -n "$(find problems -name '*.js' -print -quit)" ]; then
+            npx eslint problems --ext .js
+          else
+            echo "No JavaScript files to lint."
+          fi
