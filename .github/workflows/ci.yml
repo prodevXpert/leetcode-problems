@@ -80,7 +80,7 @@ jobs:
           node-version: "20"
 
       - name: Install ESLint
-        run: npm init -y && npm install --save-dev eslint@8
+        run: npm ci
 
       - name: Lint JavaScript
         run: |

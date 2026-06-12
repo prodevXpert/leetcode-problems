@@ -123,7 +123,9 @@ Avoid splitting by language at the repo root (`python/problems/...`, `js/problem
 
 | # | Date | ID | Title | Difficulty | Topics | Status |
 |---|------|-----|-------|------------|--------|--------|
-| 1 | 2026-06-09 | [1929](https://leetcode.com/problems/concatenation-of-array/) | Concatenation of Array | Easy | Array | ✅ Done |
+| 1 | 2026-06-10 | [1929](https://leetcode.com/problems/concatenation-of-array/) | Concatenation of Array | Easy | Array | ✅ Done |
+
+| 2 | 2026-06-11 | [1470](https://leetcode.com/problems/shuffle-the-array/) | Shuffle the Array | Easy | Array | ✅ Done |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Planned
 
@@ -134,6 +136,9 @@ From the repo root:
 ```bash
 python3 problems/1929-concatenation-of-array/python/test_solution.py
 node problems/1929-concatenation-of-array/javascript/test_solution.js
+
+python3 problems/1470-shuffle-the-array/python/test_solution.py
+node problems/1470-shuffle-the-array/javascript/test_solution.js
 ```
 
 ## License
