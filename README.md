@@ -124,7 +124,6 @@ Avoid splitting by language at the repo root (`python/problems/...`, `js/problem
 | # | Date | ID | Title | Difficulty | Topics | Status |
 |---|------|-----|-------|------------|--------|--------|
 | 1 | 2026-06-10 | [1929](https://leetcode.com/problems/concatenation-of-array/) | Concatenation of Array | Easy | Array | ✅ Done |
-
 | 2 | 2026-06-11 | [1470](https://leetcode.com/problems/shuffle-the-array/) | Shuffle the Array | Easy | Array | ✅ Done |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Planned
