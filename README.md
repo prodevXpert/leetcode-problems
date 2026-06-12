@@ -123,7 +123,7 @@ Avoid splitting by language at the repo root (`python/problems/...`, `js/problem
 
 | # | Date | ID | Title | Difficulty | Topics | Status |
 |---|------|-----|-------|------------|--------|--------|
-| 1 | — | [1929](https://leetcode.com/problems/concatenation-of-array/) | Concatenation of Array | Easy | Array | 🟡 In progress |
+| 1 | 2026-06-10 | [1929](https://leetcode.com/problems/concatenation-of-array/) | Concatenation of Array | Easy | Array | ✅ Done |
 
 **Legend:** ✅ Done · 🟡 In progress · ⬜ Planned
 
@@ -132,7 +132,8 @@ Avoid splitting by language at the repo root (`python/problems/...`, `js/problem
 From the repo root:
 
 ```bash
-python problems/1929-concatenation-of-array/python/test_solution.py
+python3 problems/1929-concatenation-of-array/python/test_solution.py
+node problems/1929-concatenation-of-array/javascript/test_solution.js
 ```
 
 ## License
