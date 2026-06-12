@@ -132,7 +132,8 @@ Avoid splitting by language at the repo root (`python/problems/...`, `js/problem
 From the repo root:
 
 ```bash
-python problems/1929-concatenation-of-array/python/test_solution.py
+python3 problems/1929-concatenation-of-array/python/test_solution.py
+node problems/1929-concatenation-of-array/javascript/test_solution.js
 ```
 
 ## License
