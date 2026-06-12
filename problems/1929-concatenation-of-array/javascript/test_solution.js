@@ -1,14 +1,17 @@
 const { getConcatenation } = require('./solution');
 
 const cases = [
-    { nums:[1, 2, 1], expected: [1, 2, 1, 1, 2, 1] },
-    { nums:[1, 3, 2, 1], expected: [1, 3, 2, 1, 1, 3, 2, 1] },
+    { nums: [1, 2, 1], expected: [1, 2, 1, 1, 2, 1] },
+    { nums: [1, 3, 2, 1], expected: [1, 3, 2, 1, 1, 3, 2, 1] },
 ];
 
-cases.forEach(({ nums, expected }) => {
+for (let i = 0; i < cases.length; i++) {
+    const { nums, expected } = cases[i];
     const result = getConcatenation(nums);
-    console.log(result);
-    console.assert(JSON.stringify(result) === JSON.stringify(expected), `Expected ${expected} but got ${result}`);
-});
+    if (JSON.stringify(result) !== JSON.stringify(expected)) {
+        console.error(`Case ${i + 1}: got ${JSON.stringify(result)}, want ${JSON.stringify(expected)}`);
+        process.exit(1);
+    }
+}
 
-console.log('All test cases passed!');
+console.log(`All ${cases.length} test cases passed!`);
